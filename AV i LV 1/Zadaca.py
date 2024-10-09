@@ -31,6 +31,14 @@ def cos(x: float) -> float:  # Bit ce prvih 5 decimala tacno
     return suma
 
 
+def korijen(x: float, xn = 1.0, greska = 1e-8) -> float:
+    if abs(x - xn**2) < greska:
+        return xn
+    else:
+        xn = 1/2*(xn+x/xn)
+        return korijen(x, xn, greska)
+
+
 def ln(x: float) -> float: # Bit ce prvih 5 decimala tacno. 1/n < 10-5 pa je n < 10^5 koliko puta se petlja mora ponoviti da bi bio tacan rezultat
     suma = 0
     for i in range(0, 100000):  # Ovdje se petlja mora ponoviti najmanje 9 puta da bi 5 decimala bilo tacno (Maklorenov red)
@@ -42,3 +50,4 @@ print(f"{eksponencijalnaFunkcija(-1/2):.5f}")
 print(f"{sin(-1/2):.5f}")
 print(f"{cos(-1/2):.5f}")
 print(f"{ln(1):.5f}")  # Ovo ce izracunati ln(2) jer je Maklorenov red za ln(1+x)
+print(f"{korijen(10):.5f}")
