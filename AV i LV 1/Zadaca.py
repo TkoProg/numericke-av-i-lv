@@ -31,7 +31,7 @@ def cos(x: float) -> float:  # Bit ce prvih 5 decimala tacno
     return suma
 
 
-def korijen(x: float, xn = 1.0, greska = 1e-8) -> float:
+def korijen(x: float, xn=1.0, greska=1e-8) -> float:
     if abs(x - xn**2) < greska:
         return xn
     else:
@@ -49,5 +49,5 @@ def ln(x: float) -> float: # Bit ce prvih 5 decimala tacno. 1/n < 10-5 pa je n <
 print(f"{eksponencijalnaFunkcija(-1/2):.5f}")
 print(f"{sin(-1/2):.5f}")
 print(f"{cos(-1/2):.5f}")
-print(f"{ln(1):.5f}")  # Ovo ce izracunati ln(2) jer je Maklorenov red za ln(1+x)
+print(f"{ln(1):.5f}")  # Ovo ce izracunati ln(2) jer je Maklorenov red za ln(1+x), ali treba ogroman broj ponavljanja petlje
 print(f"{korijen(10):.5f}")
