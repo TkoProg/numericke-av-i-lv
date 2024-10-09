@@ -31,11 +31,11 @@ def cos(x: float) -> float:  # Bit ce prvih 5 decimala tacno
     return suma
 
 
-def korijen(x: float, xn=1.0, greska=1e-8) -> float:
+def korijen(x: float, xn=1.0, greska=1e-8) -> float:  # x je broj za koji se trazi korijen, xn je pretpostavljena vrijednost, greska je tolerancija za koliko blizu zelimo da bude stvarne vrijednosti
     if abs(x - xn**2) < greska:
         return xn
     else:
-        xn = 1/2*(xn+x/xn)
+        xn = 1/2*(xn+x/xn)  # Ovo je Newtonova rekurzivna metoda za trazenje korijena broja
         return korijen(x, xn, greska)
 
 
