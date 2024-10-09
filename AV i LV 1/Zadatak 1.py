@@ -3,6 +3,7 @@ from typing import List
 # b) Vratiti x^n (n iz N)
 # Svi algoritmi uradjeni imaju zapisani sa vjezbi
 
+
 def stepenovanje(x: float, n: int) -> float:
     rez = 1.0
     for i in range(1, n+1):
@@ -47,9 +48,10 @@ def sDesnaNaLijevo(x: float, n: int) -> float: # Algoritam A2
         Z *= Z
     return Y
 
+
 x = float(input())
 n = int(input())
 
-print(stepenovanje(x, n)) # Uzasno sporo
-print(sLijevaNaDesno(x, n)) # Brzo
-print(sDesnaNaLijevo(x, n)) # Najbrzi od ova 3 algoritma
+print(stepenovanje(x, n))  # Uzasno sporo
+print(sLijevaNaDesno(x, n))  # Brzo
+print(sDesnaNaLijevo(x, n))  # Najbrzi od ova 3 algoritma
