@@ -36,7 +36,7 @@ def mojaBoljaE(x: float, eps: float) -> float:
             fakt *= i
             rez += temp / fakt
         i += 1
-        rn = (3*temp * x) / fakt * i
+        rn = (2.72*temp * x) / fakt * i
         if rn < eps:
             break
     return rez
