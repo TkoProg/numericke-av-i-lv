@@ -33,4 +33,4 @@ def lnlistabolje(x: float) -> float:
 
 print(ln(1))
 print(lnbolji(1/3))
-print(lnlista(1/3))
+print(lnlistabolje(1/3))
