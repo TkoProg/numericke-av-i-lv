@@ -6,6 +6,7 @@ def ln(x: float) -> float:
         temp *= x
     return suma
 
+
 def lnbolji(x: float) -> float:
     suma = 0
     temp = x
@@ -15,7 +16,8 @@ def lnbolji(x: float) -> float:
         temp *= x
     return suma
 
-def lnlista(x: float) -> float:
+
+def lnlistabolje(x: float) -> float:
     suma = 0
     temp = x
     lista = []
